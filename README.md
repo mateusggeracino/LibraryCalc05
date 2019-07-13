@@ -5,3 +5,14 @@ Biblioteca de operações matemáticas avançadas
 
 ## How to install
 Install-Package LibraryCalc05 -Version 1.0.2
+
+```cs
+  class Program{
+    var calc = new Calc();
+    var valores = new Valores();
+    valores.AdicionarValorA(10);
+    valores.AdicionarValorB(20);
+    
+    var resultado = calc.Somar(valores);
+  }
+  ```
