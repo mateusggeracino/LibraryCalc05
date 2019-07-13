@@ -57,6 +57,25 @@ namespace LibraryCalc05.Tests
             Assert.True(valores.ValorA - valores.ValorB == resultado);
         }
 
+        [Theory]
+        [InlineData(10)]
+        [InlineData(5)]
+        [InlineData(1)]
+        public void SubtrairAleatorioSucesso(int valorAleatorio)
+        {
+            //Arrange
+            var valores = new Valores();
+            valores.AdicionarValorA(10);
+            valores.AdicionarValorB(10);
+            var calc = new Calc();
+
+            //Act
+            var resultado = calc.Subtracao(valores, valorAleatorio);
+
+            //Assert
+            Assert.True(valores.ValorA - valores.ValorB - valorAleatorio == resultado);
+        }
+
         [Fact]
         public void MultiplicarSucesso()
         {
@@ -171,6 +190,25 @@ namespace LibraryCalc05.Tests
 
             //Assert
             Assert.False(valores.ValorA + valores.ValorB + valorAleatorio != resultado);
+        }
+
+        [Theory]
+        [InlineData(10)]
+        [InlineData(5)]
+        [InlineData(1)]
+        public void SubtrairAleatorioFalha(int valorAleatorio)
+        {
+            //Arrange
+            var valores = new Valores();
+            valores.AdicionarValorA(10);
+            valores.AdicionarValorB(10);
+            var calc = new Calc();
+
+            //Act
+            var resultado = calc.Subtracao(valores, valorAleatorio);
+
+            //Assert
+            Assert.False(valores.ValorA - valores.ValorB - valorAleatorio != resultado);
         }
 
     }

@@ -43,5 +43,7 @@ namespace LibraryCalc05.Business
         /// <param name="valores">Entidade que contém propriedades com valores</param>
         /// <returns></returns>
         public double Subtracao(Valores valores) => valores.ValorA - valores.ValorB;
+
+        public double Subtracao(Valores valores, int valorAleatorio) => valores.ValorA - valores.ValorB - valorAleatorio;
     }
 }

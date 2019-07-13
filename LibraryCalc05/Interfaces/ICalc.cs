@@ -10,6 +10,7 @@ namespace LibraryCalc05.Interfaces
         double Adicao(Valores valores);
         double Adicao(Valores valores, int valorAleatorio);
         double Subtracao(Valores valores);
+        double Subtracao(Valores valores, int valorAleatorio);
         double Multiplicacao(Valores valores);
         double Divisao(Valores valores);
     }
