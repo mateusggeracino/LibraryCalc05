@@ -6,6 +6,8 @@ Biblioteca de operações matemáticas avançadas
 ## How to install
 Install-Package LibraryCalc05 -Version 1.0.2
 
+![Nuget](https://img.shields.io/nuget/dt/LibraryCalc05.svg)
+
 ```cs
   class Program{
     var calc = new Calc();
